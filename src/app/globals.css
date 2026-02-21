@@ -4,26 +4,26 @@
 
 @layer base {
   :root {
-    --background: 180 27% 91%; /* #E0EEEE - Light grayish-blue */
+    --background: 210 40% 98%; /* 非常淺的藍灰色背景 */
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
-    --primary: 180 100% 25%; /* #008080 - Deep teal */
+    --primary: 221 39% 11%; /* 極致深藍（接近黑） */
     --primary-foreground: 210 40% 98%;
-    --secondary: 180 20% 85%;
-    --secondary-foreground: 180 100% 15%;
-    --muted: 180 10% 85%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
+    --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 43 89% 38%; /* #B8860B - Soft gold */
+    --accent: 221.2 83.2% 53.3%; /* 亮眼的專業藍 */
     --accent-foreground: 210 40% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 180 20% 80%;
-    --input: 180 20% 80%;
-    --ring: 180 100% 25%;
-    --radius: 0.75rem;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -33,13 +33,13 @@
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-    --primary: 180 100% 35%;
+    --primary: 210 40% 98%;
     --primary-foreground: 222.2 47% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 43 89% 45%;
+    --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -66,6 +66,7 @@
     background-color: white !important;
     padding: 0 !important;
     margin: 0 !important;
+    -webkit-print-color-adjust: exact;
   }
   .print-break-inside-avoid {
     page-break-inside: avoid;
@@ -74,7 +75,7 @@
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 1.5cm !important;
+    padding: 1cm !important;
   }
   a {
     text-decoration: none !important;

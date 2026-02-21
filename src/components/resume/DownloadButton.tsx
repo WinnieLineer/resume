@@ -1,6 +1,6 @@
 "use client"
 
-import { Download } from "lucide-react"
+import { FileDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function DownloadButton() {
@@ -11,11 +11,11 @@ export function DownloadButton() {
   return (
     <Button 
       onClick={handleDownload}
-      className="fixed bottom-8 right-8 z-50 rounded-full h-14 w-14 shadow-2xl no-print bg-primary hover:bg-primary/90 text-white"
-      size="icon"
-      aria-label="Download PDF"
+      variant="outline"
+      className="gap-2 border-primary/20 hover:border-primary bg-white text-primary shadow-sm transition-all"
     >
-      <Download className="w-6 h-6" />
+      <FileDown className="w-4 h-4" />
+      <span>匯出 PDF 履歷</span>
     </Button>
   )
 }

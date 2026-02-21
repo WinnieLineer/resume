@@ -1,6 +1,6 @@
 "use client"
 
-import { Briefcase, Calendar } from "lucide-react"
+import { Calendar } from "lucide-react"
 
 const experiences = [
   {
@@ -22,20 +22,10 @@ const experiences = [
     period: "Nov 2022 – Apr 2025",
     location: "Taipei, Taiwan",
     achievements: [
-      "Core Banking & FX Integration: Engineered enhancements to the core banking system to seamlessly interface with the foreign exchange (FX) module. Enabled secure, zero-touch automated processing for cross-border transactions, robustly supporting a 3.3x year-over-year surge in USD outward remittances in early 2026.",
-      "Transaction Management: Maintained and optimized core transfer functionalities, achieving 99.9%+ high availability (requiring maintenance only biannually) and secure transaction processing for large-scale user operations."
+      "Core Banking & FX Integration: Engineered enhancements to the core banking system to seamlessly interface with the foreign exchange (FX) module. Enabled secure, zero-touch automated processing for cross-border transactions, robustly supporting a 3.3x year-over-year surge in USD outward remittances.",
+      "Transaction Management: Maintained and optimized core transfer functionalities, achieving 99.9%+ high availability and secure transaction processing for large-scale user operations."
     ],
     stack: "Java, Spring Boot, Oracle Database, MySQL, MSSQL"
-  },
-  {
-    role: "Sabbatical & Professional Development",
-    company: "Career Break",
-    period: "Feb 2022 – Oct 2022",
-    location: "Singapore & Taiwan",
-    achievements: [
-      "Immersed in Singapore's culture and diverse communities for two months, establishing a strong foundation and high adaptability for future relocation.",
-      "Enrolled in advanced Computer Science coursework (Algorithms, Data Structures, Computer Networks) at National Chiao Tung University to deepen system design capabilities."
-    ]
   },
   {
     role: "Software Engineer",
@@ -45,63 +35,45 @@ const experiences = [
     achievements: [
       "Microservices Development: Designed and implemented microservices for core banking operations using Java (Spring Boot), Oracle SQL, and Vue.js.",
       "System Optimization: Delivered robust backend systems supporting over 150,000 daily active users, improving operational efficiency by 20% through optimized workflows.",
-      "Cross-functional Delivery: Bridged technical and business requirements across cross-functional teams. Consistently delivered high-quality microservices at 2x the average team velocity, ensuring critical banking projects met tight deadlines."
+      "Cross-functional Delivery: Bridged technical and business requirements across cross-functional teams. Consistently delivered high-quality microservices at 2x the average team velocity."
     ],
     stack: "Java, Spring Boot, Oracle Database, REST APIs, Vue.js"
-  },
-  {
-    role: "Engineer",
-    company: "Compal",
-    period: "Jul 2018 – Feb 2020",
-    location: "Jiangsu, China",
-    achievements: [
-      "Developed and maintained supply chain management and procurement software solutions using Agile methodologies."
-    ]
   }
 ]
 
 export function Experience() {
   return (
     <section className="space-y-8 animate-fade-in-up [animation-delay:400ms]">
-      <h2 className="text-2xl font-bold text-primary flex items-center gap-2">
-        <span className="w-8 h-px bg-primary/30"></span>
-        EXPERIENCE
+      <h2 className="text-2xl font-black text-primary tracking-tighter flex items-center gap-4">
+        WORK EXPERIENCE
+        <div className="h-px flex-1 bg-border"></div>
       </h2>
       
-      <div className="relative border-l-2 border-primary/20 ml-3 pl-8 space-y-12">
+      <div className="space-y-12">
         {experiences.map((exp, idx) => (
           <div key={idx} className="relative group print-break-inside-avoid">
-            {/* Timeline dot */}
-            <div className="absolute -left-[41px] top-1.5 w-6 h-6 bg-background border-2 border-primary rounded-full flex items-center justify-center group-hover:bg-primary transition-colors">
-              <div className="w-2 h-2 bg-primary group-hover:bg-white rounded-full"></div>
-            </div>
-            
-            <div className="space-y-3">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-1">
-                <h3 className="text-xl font-bold text-foreground">{exp.role} | <span className="text-primary">{exp.company}</span></h3>
-                <div className="flex items-center gap-2 text-sm font-medium text-accent bg-accent/5 px-3 py-1 rounded-full whitespace-nowrap">
+            <div className="space-y-4">
+              <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary">{exp.role}</h3>
+                  <p className="text-lg font-bold text-accent">{exp.company}</p>
+                </div>
+                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground bg-secondary px-3 py-1 rounded">
                   <Calendar className="w-3 h-3" />
                   {exp.period}
                 </div>
               </div>
               
-              <div className="text-sm font-medium text-muted-foreground flex items-center gap-1">
-                <Briefcase className="w-3 h-3" />
-                {exp.location}
-              </div>
-
-              <ul className="list-disc list-outside ml-5 space-y-2 text-foreground/80 leading-relaxed">
+              <ul className="list-disc list-outside ml-5 space-y-2.5 text-foreground/80 leading-relaxed font-medium">
                 {exp.achievements.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
 
               {exp.stack && (
-                <div className="pt-2">
-                  <p className="text-sm font-semibold text-primary/80">
-                    <span className="text-accent uppercase text-[10px] tracking-widest mr-2 border border-accent/30 px-1.5 rounded">Stack:</span>
-                    {exp.stack}
-                  </p>
+                <div className="pt-2 flex items-center gap-2">
+                  <span className="text-[10px] font-black uppercase tracking-tighter text-accent border border-accent/20 px-2 py-0.5 rounded">Tech Stack</span>
+                  <p className="text-sm font-semibold text-primary/70">{exp.stack}</p>
                 </div>
               )}
             </div>
