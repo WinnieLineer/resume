@@ -1,4 +1,3 @@
-
 "use client"
 
 import { ResumeHeader } from "@/components/resume/ResumeHeader"
@@ -16,14 +15,19 @@ export default function Home() {
       </div>
 
       <div className="a4-container">
-        <div className="space-y-6">
+        {/* Background Watermark */}
+        <div className="watermark" aria-hidden="true">
+          For Recruitment Purpose Only
+        </div>
+
+        <div className="relative z-10 space-y-6">
           <ResumeHeader />
           <TechStack />
           <Experience />
           <Education />
         </div>
 
-        <footer className="mt-12 pt-2 border-t border-black">
+        <footer className="mt-12 pt-2 border-t border-black relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-[8px] font-black uppercase tracking-[0.2em] text-muted-foreground">
             <div className="flex items-center gap-4">
               <span>Shi Ting (Winnie) Lin • Senior Backend Engineer</span>

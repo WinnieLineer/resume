@@ -36,6 +36,22 @@
   }
 }
 
+.watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
 @media screen {
   .a4-container {
     width: 210mm;
@@ -44,6 +60,7 @@
     box-shadow: 0 40px 100px rgba(0,0,0,0.1);
     padding: 15mm 15mm;
     position: relative;
+    overflow: hidden;
   }
 }
 
@@ -63,18 +80,26 @@
     margin: 0 !important;
     box-shadow: none !important;
     background: white !important;
+    overflow: visible !important;
   }
   .no-print {
     display: none !important;
   }
   
-  /* 關鍵修復：防止動畫導致渲染位移 */
+  .watermark {
+    display: block !important;
+    color: rgba(0, 0, 0, 0.04) !important;
+    font-size: 72pt;
+    z-index: -1;
+  }
+
   * {
     animation: none !important;
     transition: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
   
-  /* 關鍵修復：確保區塊能正常跨頁，但單個項目不被截斷 */
   section {
     page-break-inside: auto !important;
     margin-bottom: 5mm !important;
@@ -91,6 +116,9 @@
     width: 100%;
     margin: 0;
     padding: 1.5rem;
+  }
+  .watermark {
+    font-size: 30px;
   }
 }
 
