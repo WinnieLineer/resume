@@ -36,7 +36,7 @@
   }
 }
 
-/* 浮水印核心樣式 */
+/* 浮水印核心樣式 - 確保在最頂層且不干擾操作 */
 .watermark {
   position: fixed;
   top: 50%;
@@ -44,10 +44,10 @@
   transform: translate(-50%, -50%) rotate(-45deg);
   font-size: 60pt;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.05); /* 稍微增加透明度以確保列印可見 */
+  color: rgba(0, 0, 0, 0.04); /* 極低透明度 */
   white-space: nowrap;
-  pointer-events: none;
-  z-index: 0; /* 在背景之上，內容之下 */
+  pointer-events: none; /* 穿透點擊 */
+  z-index: 9999; /* 強制置頂，確保不被背景遮擋 */
   user-select: none;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -63,6 +63,7 @@
     padding: 15mm 15mm;
     position: relative;
     overflow: hidden;
+    z-index: 10;
   }
 }
 
@@ -92,8 +93,8 @@
   .watermark {
     display: block !important;
     position: fixed !important;
-    color: rgba(0, 0, 0, 0.05) !important;
-    z-index: 0 !important;
+    color: rgba(0, 0, 0, 0.04) !important;
+    z-index: 9999 !important;
   }
 
   * {
