@@ -22,18 +22,18 @@ const skills = [
 
 export function TechStack() {
   return (
-    <section className="animate-slide-up [animation-delay:100ms] space-y-3">
+    <section className="animate-slide-up [animation-delay:100ms] space-y-2">
       <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-muted-foreground border-b border-black pb-1">Technical Core</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-black">
         {skills.map((skill, idx) => (
-          <div key={idx} className="border-r last:border-r-0 border-black p-4 hover:bg-black hover:text-white transition-all duration-300 group">
-            <div className="flex items-center gap-2 mb-2">
+          <div key={idx} className="border-r last:border-r-0 border-black p-3 hover:bg-black hover:text-white transition-all duration-300 group">
+            <div className="flex items-center gap-2 mb-1">
               <span className="text-accent group-hover:text-white">{skill.icon}</span>
               <h3 className="text-[10px] font-black uppercase tracking-wider">{skill.category}</h3>
             </div>
-            <div className="flex flex-wrap gap-x-3 gap-y-1">
+            <div className="flex flex-wrap gap-x-3 gap-y-0.5">
               {skill.items.map((item, i) => (
-                <span key={i} className="text-[12px] font-bold tracking-tight opacity-90">{item}</span>
+                <span key={i} className="text-[11.5px] font-bold tracking-tight opacity-90">{item}</span>
               ))}
             </div>
           </div>

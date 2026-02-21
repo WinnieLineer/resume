@@ -32,7 +32,7 @@ const experiences = [
   {
     role: "Sabbatical & Professional Development",
     company: "Career Break",
-    url: "#",
+    url: "",
     period: "Feb 2022 – Oct 2022",
     location: "Singapore & Taiwan",
     tech: "Algorithms, Data Structures, Networks",
@@ -69,9 +69,9 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section className="animate-slide-up [animation-delay:200ms] space-y-4">
+    <section className="animate-slide-up [animation-delay:200ms] space-y-3">
       <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-muted-foreground border-b border-black pb-1">Experience</h2>
-      <div className="space-y-5">
+      <div className="space-y-4">
         {experiences.map((exp, idx) => (
           <div key={idx} className="grid grid-cols-1 md:grid-cols-[130px_1fr] gap-4 relative group break-inside-avoid">
             <div className="space-y-0.5">
@@ -82,32 +82,36 @@ export function Experience() {
                 {exp.location}
               </div>
             </div>
-            <div className="space-y-1.5">
+            <div className="space-y-1">
               <div className="flex flex-col gap-0.5">
-                <h3 className="text-lg font-black tracking-tighter leading-none uppercase">
+                <h3 className="text-[17px] font-black tracking-tighter leading-none uppercase">
                   {exp.role} 
                 </h3>
                 <div className="flex items-center gap-2">
-                  <a 
-                    href={exp.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-accent font-black text-[13px] hover:underline inline-flex items-center gap-1"
-                  >
-                    {exp.company}
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+                  {exp.url ? (
+                    <a 
+                      href={exp.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-accent font-black text-[12px] hover:underline inline-flex items-center gap-1"
+                    >
+                      {exp.company}
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  ) : (
+                    <span className="text-black font-black text-[12px]">{exp.company}</span>
+                  )}
                   {exp.tech && (
-                    <div className="flex items-center gap-1 px-1 py-0.5 bg-black text-white text-[8.5px] font-black uppercase tracking-widest">
+                    <div className="flex items-center gap-1 px-1 py-0.5 bg-black text-white text-[8px] font-black uppercase tracking-widest">
                       <Zap className="w-2.5 h-2.5 fill-accent text-accent" /> {exp.tech}
                     </div>
                   )}
                 </div>
               </div>
 
-              <ul className="space-y-1 text-[12px] leading-snug font-medium text-foreground/90 border-l-[1.5px] border-black pl-4 relative">
+              <ul className="space-y-1 text-[11.5px] leading-tight font-medium text-foreground/90 border-l-[1.5px] border-black pl-4 relative">
                 {exp.achievements.map((item, i) => (
-                  <li key={i} className="relative before:content-[''] before:absolute before:-left-[19px] before:top-[6px] before:w-1.5 before:h-1.5 before:bg-accent">
+                  <li key={i} className="relative before:content-[''] before:absolute before:-left-[19px] before:top-[6px] before:w-1 before:h-1 before:bg-accent">
                     {item}
                   </li>
                 ))}

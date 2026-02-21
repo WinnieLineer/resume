@@ -4,7 +4,7 @@ import { Mail, Phone, Linkedin, Globe, MapPin, Info } from "lucide-react"
 
 export function ResumeHeader() {
   return (
-    <header className="animate-slide-up space-y-5">
+    <header className="animate-slide-up space-y-4">
       <div className="border-b-[3px] border-black pb-4">
         <div className="flex flex-col md:flex-row justify-between items-end gap-2">
           <div className="space-y-0">
@@ -33,15 +33,15 @@ export function ResumeHeader() {
             <Info className="w-3 h-3" /> Profile
           </h2>
           <div className="space-y-1.5">
-            <p className="text-[13.5px] font-bold leading-tight text-foreground">
+            <p className="text-[13px] font-bold leading-tight text-foreground">
               Senior Backend Engineer with 7+ years of experience specializing in core banking systems, global fiat gateways, and high-performance microservices.
             </p>
-            <p className="text-[12px] font-medium text-muted-foreground leading-snug">
+            <p className="text-[11.5px] font-medium text-muted-foreground leading-snug">
               Proven track record in optimizing payment workflows and scaling high-concurrency systems using Java and Kotlin. Eligible for Dependant's Pass (DP), highly adaptable for local or remote opportunities.
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-y-1.5 text-[11px] font-black border-l-2 border-black pl-5">
+        <div className="grid grid-cols-1 gap-y-1 text-[11px] font-black border-l-2 border-black pl-5">
           <a href="mailto:linw2949@gmail.com" className="hover:text-accent transition-all flex items-center gap-2 group">
             <div className="w-4.5 h-4.5 bg-black flex items-center justify-center group-hover:bg-accent transition-colors shrink-0 p-0.5">
               <Mail className="w-3 h-3 text-white" />

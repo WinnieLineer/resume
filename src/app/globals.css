@@ -32,7 +32,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#f0f0f0] text-foreground font-body antialiased;
+    @apply bg-[#f4f4f4] text-foreground font-body antialiased;
   }
 }
 
@@ -53,7 +53,7 @@
 @media print {
   @page {
     size: A4;
-    margin: 0; /* 強制移除瀏覽器邊距 */
+    margin: 0;
   }
   body {
     background: white !important;
@@ -73,7 +73,7 @@
   }
   
   section {
-    page-break-inside: avoid; /* 防止區塊在頁面中間被切斷 */
+    page-break-inside: avoid;
   }
 }
 
