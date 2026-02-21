@@ -8,7 +8,7 @@ export function ResumeHeader() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div className="space-y-0.5">
           <h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-none">
-            SHI TING <span className="text-accent">LIN</span>
+            SHI TING (WINNIE) <span className="text-accent">LIN</span>
           </h1>
           <p className="text-base font-black tracking-[0.05em] uppercase text-black">
             Senior Backend Engineer
@@ -57,7 +57,7 @@ export function ResumeHeader() {
           Senior Backend Engineer with 7+ years of experience specializing in core banking systems, global fiat gateways, and high-performance microservices.
         </p>
         <p className="text-[11px] font-medium text-muted-foreground leading-snug">
-          Proven track record in optimizing payment workflows and scaling high-concurrency systems using Java and Kotlin. Eligible for Dependant's Pass (DP), highly adaptable for local or remote opportunities.
+          Proven track record in optimizing payment workflows and scaling high-concurrency systems using Java and Kotlin. Relocating to Singapore in mid-June 2026. Eligible for Dependant's Pass (DP), highly adaptable for local or remote opportunities.
         </p>
       </div>
     </header>

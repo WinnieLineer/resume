@@ -43,15 +43,15 @@ const experiences = [
   },
   {
     role: "Software Engineer",
-    company: "E.SUN Financial",
+    company: "E.SUN Financial Holding Co., Ltd",
     url: "https://www.esunbank.com.tw",
     period: "Apr 2020 – Nov 2021",
     location: "Taipei, Taiwan",
-    tech: "Java, Spring Boot, Oracle, REST APIs, Vue.js",
+    tech: "Java, Spring Boot, Oracle Database, REST APIs, Vue.js",
     achievements: [
       "Microservices Development: Designed and implemented microservices for core banking operations using Java (Spring Boot), Oracle SQL, and Vue.js.",
       "System Optimization: Delivered robust backend systems supporting over 150,000 daily active users, improving operational efficiency by 20% through optimized workflows.",
-      "Cross-functional Delivery: Consistently delivered high-quality microservices at 2x the average team velocity, ensuring critical banking projects met tight deadlines."
+      "Cross-functional Delivery: Bridged technical and business requirements across cross-functional teams. Consistently delivered high-quality microservices at 2x the average team velocity, ensuring critical banking projects met tight deadlines."
     ]
   },
   {
@@ -62,7 +62,7 @@ const experiences = [
     location: "Jiangsu, China",
     tech: "Agile, Supply Chain Management",
     achievements: [
-      "Supply Chain Solutions: Developed and maintained SCM and procurement software solutions using Agile methodologies."
+      "Supply Chain Solutions: Developed and maintained supply chain management and procurement software solutions using Agile methodologies."
     ]
   }
 ]
@@ -73,7 +73,7 @@ export function Experience() {
       <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-muted-foreground border-b border-black pb-1">Experience</h2>
       <div className="space-y-5">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="experience-item grid grid-cols-1 md:grid-cols-[130px_1fr] gap-x-6 gap-y-1">
+          <div key={idx} className="experience-item grid grid-cols-1 md:grid-cols-[130px_1fr] gap-x-6 gap-y-1 page-break-inside-avoid">
             <div className="space-y-0.5">
               <div className="text-[10px] font-black text-black uppercase tracking-tighter">
                 {exp.period}

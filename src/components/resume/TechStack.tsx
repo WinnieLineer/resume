@@ -11,12 +11,12 @@ const skills = [
   { 
     category: "Frameworks & Tools", 
     icon: <Server className="w-3 h-3" />,
-    items: ["Spring Boot", "Ktor", "Redis", "PostgreSQL", "Oracle DB", "Kafka", "Flyway"] 
+    items: ["Spring Boot", "Ktor", "Koin", "Redis", "PostgreSQL", "Oracle Database", "Vue.js", "Flyway"] 
   },
   { 
     category: "Domain Expertise", 
     icon: <Globe2 className="w-3 h-3" />,
-    items: ["SWIFT/SEPA", "High-Concurrency", "Core Banking", "FX Integration"] 
+    items: ["Payment Gateways (SWIFT/SEPA)", "High-Concurrency", "Core Banking & FX Integration", "Crypto-to-Fiat Systems"] 
   }
 ]
 
