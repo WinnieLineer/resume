@@ -14,19 +14,17 @@ export default function Home() {
       </div>
 
       <div className="a4-container relative">
-        <div className="space-y-8">
+        <div className="space-y-6">
           <ResumeHeader />
           <TechStack />
-          <div className="space-y-8">
-            <Experience />
-            <Education />
-          </div>
+          <Experience />
+          <Education />
         </div>
 
-        <footer className="mt-8 pt-4 border-t border-black hidden print:block">
-          <div className="flex justify-between text-[9px] font-black uppercase tracking-widest text-muted-foreground">
+        <footer className="mt-8 pt-2 border-t border-black hidden print:block">
+          <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-muted-foreground">
             <span>Shi Ting (Winnie) Lin • Senior Backend Engineer</span>
-            <span>Page 1 of 2</span>
+            <span>Ref: 2026.SL</span>
           </div>
         </footer>
       </div>

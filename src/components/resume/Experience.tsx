@@ -12,9 +12,9 @@ const experiences = [
     tech: "Kotlin, Ktor, PostgreSQL, Kafka, Redis, API Integration",
     achievements: [
       "Global Fiat Integration: Integrated Equals API and Bank Frick to enable multi-currency (GBP, EUR, USD) deposits and automated withdrawals across FPS, SEPA, and SWIFT networks. Reduced manual processing time to near zero through end-to-end API automation.",
-      "High-Performance Architecture: Engineered a Redis-based (Sorted Sets) reward hold system to manage time-bound withdrawal limits. Achieved sub-10s end-to-end processing with millisecond-level Redis queries for high-frequency frontend polling.",
+      "High-Performance Architecture: Engineered a Redis-based (Sorted Sets) reward hold system to manage time-bound withdrawal limits. Achieved sub-10 second end-to-end processing with millisecond-level Redis queries, ensuring seamless high-frequency frontend polling.",
       "Security & Compliance: Implemented automated bank account ownership validation via Volt API and established secure webhook architectures with payload signature and token verification.",
-      "Platform Scalability: Designed a cache-optimized crypto address generation module to reduce database load and enhanced TradeView backend for Contract for Difference (CFD) functionalities."
+      "Platform Scalability: Designed a cache-optimized crypto address generation module to reduce database load and enhanced the TradeView backend to support Contract for Difference (CFD) functionalities."
     ]
   },
   {
@@ -25,8 +25,8 @@ const experiences = [
     location: "Taipei, Taiwan",
     tech: "Java, Spring Boot, Oracle Database, MySQL, MSSQL",
     achievements: [
-      "Core Banking & FX Integration: Engineered enhancements to core banking for FX module interface. Enabled secure automated processing for cross-border transactions, supporting 3.3x YoY surge in USD outward remittances.",
-      "Transaction Management: Optimized core transfer functionalities, achieving 99.9%+ high availability (maintenance only biannually) for large-scale operations."
+      "Core Banking & FX Integration: Engineered enhancements to the core banking system to seamlessly interface with the foreign exchange (FX) module. Enabled secure, zero-touch automated processing for cross-border transactions, robustly supporting a 3.3x year-over-year surge in USD outward remittances in early 2026.",
+      "Transaction Management: Maintained and optimized core transfer functionalities, achieving 99.9%+ high availability (requiring maintenance only biannually) and secure transaction processing for large-scale user operations."
     ]
   },
   {
@@ -37,8 +37,8 @@ const experiences = [
     location: "Singapore & Taiwan",
     tech: "Algorithms, Data Structures, Networks",
     achievements: [
-      "Singapore Immersion: Immersed in Singapore for two months, establishing high adaptability for future relocation.",
-      "Advanced Coursework: Enrolled in CS coursework (Algorithms, Data Structures, Networks) at National Chiao Tung University to deepen system design capabilities."
+      "Singapore Immersion: Immersed in Singapore's culture and diverse communities for two months, establishing a strong foundation and high adaptability for future relocation.",
+      "Advanced Coursework: Enrolled in advanced Computer Science coursework (Algorithms, Data Structures, Computer Networks) at National Chiao Tung University to deepen system design capabilities."
     ]
   },
   {
@@ -49,9 +49,9 @@ const experiences = [
     location: "Taipei, Taiwan",
     tech: "Java, Spring Boot, Oracle, REST APIs, Vue.js",
     achievements: [
-      "Microservices Development: Designed and implemented microservices for core banking operations using Java (Spring Boot) and Vue.js.",
-      "System Optimization: Supported 150k+ daily active users, improving operational efficiency by 20% through optimized workflows.",
-      "Cross-functional Delivery: Consistently delivered high-quality microservices at 2x average team velocity, ensuring critical banking projects met tight deadlines."
+      "Microservices Development: Designed and implemented microservices for core banking operations using Java (Spring Boot), Oracle SQL, and Vue.js.",
+      "System Optimization: Delivered robust backend systems supporting over 150,000 daily active users, improving operational efficiency by 20% through optimized workflows.",
+      "Cross-functional Delivery: Consistently delivered high-quality microservices at 2x the average team velocity, ensuring critical banking projects met tight deadlines."
     ]
   },
   {
@@ -69,22 +69,22 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section className="animate-slide-up [animation-delay:200ms] space-y-6">
+    <section className="animate-slide-up [animation-delay:200ms] space-y-4">
       <h2 className="text-[9px] font-black uppercase tracking-[0.4em] text-muted-foreground border-b border-black pb-1">Experience</h2>
-      <div className="space-y-6">
+      <div className="space-y-5">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 relative group">
-            <div className="space-y-1">
-              <div className="text-[12px] font-black text-black uppercase tracking-tighter">
+          <div key={idx} className="grid grid-cols-1 md:grid-cols-[130px_1fr] gap-4 relative group break-inside-avoid">
+            <div className="space-y-0.5">
+              <div className="text-[11px] font-black text-black uppercase tracking-tighter">
                 {exp.period}
               </div>
-              <div className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest">
+              <div className="text-[8.5px] font-bold text-muted-foreground uppercase tracking-widest">
                 {exp.location}
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <div className="flex flex-col gap-0.5">
-                <h3 className="text-xl font-black tracking-tighter leading-none uppercase">
+                <h3 className="text-lg font-black tracking-tighter leading-none uppercase">
                   {exp.role} 
                 </h3>
                 <div className="flex items-center gap-2">
@@ -92,20 +92,22 @@ export function Experience() {
                     href={exp.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-accent font-black text-[14px] hover:underline inline-flex items-center gap-1"
+                    className="text-accent font-black text-[13px] hover:underline inline-flex items-center gap-1"
                   >
                     {exp.company}
                     <ExternalLink className="w-3 h-3" />
                   </a>
-                  <div className="flex items-center gap-1 px-1.5 py-0.5 bg-black text-white text-[9px] font-black uppercase tracking-widest">
-                    <Zap className="w-2.5 h-2.5 fill-accent text-accent" /> {exp.tech}
-                  </div>
+                  {exp.tech && (
+                    <div className="flex items-center gap-1 px-1 py-0.5 bg-black text-white text-[8.5px] font-black uppercase tracking-widest">
+                      <Zap className="w-2.5 h-2.5 fill-accent text-accent" /> {exp.tech}
+                    </div>
+                  )}
                 </div>
               </div>
 
-              <ul className="space-y-1.5 text-[12.5px] leading-snug font-medium text-foreground/90 border-l-2 border-black pl-5 relative">
+              <ul className="space-y-1 text-[12px] leading-snug font-medium text-foreground/90 border-l-[1.5px] border-black pl-4 relative">
                 {exp.achievements.map((item, i) => (
-                  <li key={i} className="relative before:content-[''] before:absolute before:-left-[22px] before:top-[6px] before:w-1.5 before:h-1.5 before:bg-accent">
+                  <li key={i} className="relative before:content-[''] before:absolute before:-left-[19px] before:top-[6px] before:w-1.5 before:h-1.5 before:bg-accent">
                     {item}
                   </li>
                 ))}
