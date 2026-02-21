@@ -8,30 +8,33 @@ import { DownloadButton } from "@/components/resume/DownloadButton"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f8f9fa] selection:bg-accent selection:text-white">
-      {/* Top Utilities for Screen Only */}
-      <div className="max-w-5xl mx-auto px-6 pt-8 flex justify-end no-print">
+    <main className="min-h-screen">
+      {/* Floating UI for Web Only */}
+      <div className="fixed top-8 right-8 z-50 no-print">
         <DownloadButton />
       </div>
 
-      <div className="container mx-auto max-w-5xl px-6 py-12 md:py-16 space-y-16 relative">
-        {/* Profile and Header */}
-        <ResumeHeader />
+      <div className="a4-container relative">
+        <div className="space-y-12">
+          {/* Header section with huge typography */}
+          <ResumeHeader />
 
-        <div className="grid grid-cols-1 gap-16">
-          {/* Technical Skills */}
+          {/* Technical Grid */}
           <TechStack />
 
-          {/* Experience Timeline */}
-          <Experience />
-
-          {/* Education */}
-          <Education />
+          {/* Main Content */}
+          <div className="space-y-12">
+            <Experience />
+            <Education />
+          </div>
         </div>
 
-        {/* Footer info for print only */}
-        <footer className="hidden print:block pt-10 border-t border-border text-center text-xs text-muted-foreground">
-          <p>Generated via winnie-lin.space • linw2949@gmail.com • +886 906-182-355</p>
+        {/* Minimalist Footer for Print */}
+        <footer className="mt-12 pt-8 border-t border-black hidden print:block">
+          <div className="flex justify-between text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+            <span>Shi Ting Lin • Senior Backend Engineer</span>
+            <span>2026 Edition</span>
+          </div>
         </footer>
       </div>
     </main>

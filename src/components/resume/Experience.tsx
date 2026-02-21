@@ -1,81 +1,62 @@
 "use client"
 
-import { Calendar } from "lucide-react"
-
 const experiences = [
   {
     role: "Senior Software Engineer",
     company: "BTSE",
-    period: "Apr 2025 – Present",
-    location: "Taipei, Taiwan",
+    period: "2025 – Present",
+    location: "Taipei",
     achievements: [
-      "Global Fiat Integration: Integrated Equals API and Bank Frick to enable multi-currency (GBP, EUR, USD) deposits and automated withdrawals across FPS, SEPA, and SWIFT networks. Reduced manual processing time to near zero through end-to-end API automation.",
-      "High-Performance Architecture: Engineered a Redis-based (Sorted Sets) reward hold system to manage time-bound withdrawal limits. Achieved sub-10 second end-to-end processing with millisecond-level Redis queries, ensuring seamless high-frequency frontend polling.",
-      "Security & Compliance: Implemented automated bank account ownership validation via Volt API and established secure webhook architectures with payload signature and token verification.",
-      "Platform Scalability: Designed a cache-optimized crypto address generation module to reduce database load and enhanced the TradeView backend to support Contract for Difference (CFD) functionalities."
-    ],
-    stack: "Kotlin, Ktor, PostgreSQL, Kafka, Redis, API Integration"
+      "Global Fiat Integration: Engineered automated multi-currency (GBP, EUR, USD) deposit/withdrawal gateways via Equals API and Bank Frick.",
+      "High-Performance Architecture: Designed Redis Sorted Sets reward system handling sub-10s end-to-end high-frequency frontend polling.",
+      "Compliance Engineering: Implemented automated bank ownership validation using Volt API and secure webhook signature architectures."
+    ]
   },
   {
     role: "Software Engineer",
     company: "LINE Bank",
-    period: "Nov 2022 – Apr 2025",
-    location: "Taipei, Taiwan",
+    period: "2022 – 2025",
+    location: "Taipei",
     achievements: [
-      "Core Banking & FX Integration: Engineered enhancements to the core banking system to seamlessly interface with the foreign exchange (FX) module. Enabled secure, zero-touch automated processing for cross-border transactions, robustly supporting a 3.3x year-over-year surge in USD outward remittances.",
-      "Transaction Management: Maintained and optimized core transfer functionalities, achieving 99.9%+ high availability and secure transaction processing for large-scale user operations."
-    ],
-    stack: "Java, Spring Boot, Oracle Database, MySQL, MSSQL"
+      "FX Core Integration: Engineered high-availability cross-border transaction modules, supporting 3.3x surge in USD remittances.",
+      "99.9% Availability: Maintained and optimized core banking transfer services for multi-million user base."
+    ]
   },
   {
     role: "Software Engineer",
-    company: "E.SUN Financial Holding Co., Ltd",
-    period: "Apr 2020 – Nov 2021",
-    location: "Taipei, Taiwan",
+    company: "E.SUN Financial",
+    period: "2020 – 2021",
+    location: "Taipei",
     achievements: [
-      "Microservices Development: Designed and implemented microservices for core banking operations using Java (Spring Boot), Oracle SQL, and Vue.js.",
-      "System Optimization: Delivered robust backend systems supporting over 150,000 daily active users, improving operational efficiency by 20% through optimized workflows.",
-      "Cross-functional Delivery: Bridged technical and business requirements across cross-functional teams. Consistently delivered high-quality microservices at 2x the average team velocity."
-    ],
-    stack: "Java, Spring Boot, Oracle Database, REST APIs, Vue.js"
+      "Microservices Scalability: Delivered backend systems for 150k daily active users with Java/Oracle.",
+      "Efficiency Boost: Optimized core workflows, improving operational speed by 20% across cross-functional delivery cycles."
+    ]
   }
 ]
 
 export function Experience() {
   return (
-    <section className="space-y-8 animate-fade-in-up [animation-delay:400ms]">
-      <h2 className="text-2xl font-black text-primary tracking-tighter flex items-center gap-4">
-        WORK EXPERIENCE
-        <div className="h-px flex-1 bg-border"></div>
-      </h2>
-      
+    <section className="animate-slide-up [animation-delay:400ms] space-y-8">
+      <h2 className="text-xs font-black uppercase tracking-[0.4em] text-muted-foreground border-b border-black pb-2">Experience</h2>
       <div className="space-y-12">
         {experiences.map((exp, idx) => (
-          <div key={idx} className="relative group print-break-inside-avoid">
-            <div className="space-y-4">
-              <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
-                <div>
-                  <h3 className="text-2xl font-bold text-primary">{exp.role}</h3>
-                  <p className="text-lg font-bold text-accent">{exp.company}</p>
-                </div>
-                <div className="flex items-center gap-2 text-sm font-bold text-muted-foreground bg-secondary px-3 py-1 rounded">
-                  <Calendar className="w-3 h-3" />
-                  {exp.period}
-                </div>
+          <div key={idx} className="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-6 group">
+            <div className="text-sm font-black text-muted-foreground pt-1.5 uppercase tracking-tighter">
+              {exp.period}
+            </div>
+            <div className="space-y-3">
+              <div className="flex flex-col md:flex-row justify-between items-start gap-1">
+                <h3 className="text-2xl font-black tracking-tight leading-none group-hover:text-accent transition-colors uppercase">
+                  {exp.role} <span className="text-muted-foreground font-medium text-lg ml-2">/ {exp.company}</span>
+                </h3>
               </div>
-              
-              <ul className="list-disc list-outside ml-5 space-y-2.5 text-foreground/80 leading-relaxed font-medium">
+              <ul className="space-y-2 text-sm font-medium text-foreground/80 border-l-[3px] border-black pl-6">
                 {exp.achievements.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i} className="relative before:content-[''] before:absolute before:-left-[27px] before:top-2 before:w-1.5 before:h-1.5 before:bg-black">
+                    {item}
+                  </li>
                 ))}
               </ul>
-
-              {exp.stack && (
-                <div className="pt-2 flex items-center gap-2">
-                  <span className="text-[10px] font-black uppercase tracking-tighter text-accent border border-accent/20 px-2 py-0.5 rounded">Tech Stack</span>
-                  <p className="text-sm font-semibold text-primary/70">{exp.stack}</p>
-                </div>
-              )}
             </div>
           </div>
         ))}
