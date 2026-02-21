@@ -36,7 +36,7 @@
   }
 }
 
-/* A4 Print Optimization */
+/* A4 Print Optimization - 物理級鎖定 */
 @media screen {
   .a4-container {
     width: 210mm;
