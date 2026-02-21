@@ -8,19 +8,19 @@ import { DownloadButton } from "@/components/resume/DownloadButton"
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-12 bg-[#f4f4f4]">
+    <main className="min-h-screen pb-12 bg-[#f4f4f4] relative">
+      {/* 浮水印移至頂層以確保跨頁顯示 */}
+      <div className="watermark" aria-hidden="true">
+        For Recruitment Purpose Only
+      </div>
+
       {/* Responsive Fixed Container for Download Button */}
       <div className="fixed bottom-6 right-6 md:top-8 md:right-8 md:bottom-auto z-50 no-print">
         <DownloadButton />
       </div>
 
-      <div className="a4-container">
-        {/* Background Watermark */}
-        <div className="watermark" aria-hidden="true">
-          For Recruitment Purpose Only
-        </div>
-
-        <div className="relative z-10 space-y-6">
+      <div className="a4-container relative z-10">
+        <div className="space-y-6">
           <ResumeHeader />
           <TechStack />
           <Experience />

@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Mail, Phone, Linkedin, Globe, MapPin } from "lucide-react"
