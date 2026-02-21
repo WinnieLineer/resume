@@ -25,11 +25,11 @@ export function ResumeHeader() {
         </div>
         
         <div className="grid grid-cols-1 gap-y-1 text-[10px] font-black border-l-2 border-black pl-4">
-          <a href="mailto:linw2949@gmail.com" className="hover:text-accent flex items-center gap-2 group">
+          <a href="mailto:hi@winnie-lin.space" className="hover:text-accent flex items-center gap-2 group">
             <div className="w-4 h-4 bg-black flex items-center justify-center shrink-0 p-0.5 group-hover:bg-accent transition-colors">
               <Mail className="w-2.5 h-2.5 text-white" />
             </div>
-            linw2949@gmail.com
+            hi@winnie-lin.space
           </a>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 bg-black flex items-center justify-center shrink-0 p-0.5">
