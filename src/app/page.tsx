@@ -1,3 +1,4 @@
+
 "use client"
 
 import { ResumeHeader } from "@/components/resume/ResumeHeader"
@@ -8,8 +9,9 @@ import { DownloadButton } from "@/components/resume/DownloadButton"
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-12">
-      <div className="fixed top-6 right-6 z-50 no-print">
+    <main className="min-h-screen pb-12 bg-[#f4f4f4]">
+      {/* Responsive Fixed Container for Download Button */}
+      <div className="fixed bottom-6 right-6 md:top-8 md:right-8 md:bottom-auto z-50 no-print">
         <DownloadButton />
       </div>
 
