@@ -46,6 +46,7 @@
     box-shadow: 0 40px 100px rgba(0,0,0,0.1);
     padding: 15mm 15mm;
     position: relative;
+    overflow: hidden;
   }
 }
 
@@ -69,6 +70,20 @@
   }
   .no-print {
     display: none !important;
+  }
+  
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* RWD for Mobile Devices */
+@media (max-width: 210mm) {
+  .a4-container {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    min-height: auto;
   }
 }
 
