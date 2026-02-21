@@ -11,7 +11,7 @@ export function ResumeHeader() {
             <h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-none">
               SHI TING (WINNIE) <span className="text-accent">LIN</span>
             </h1>
-            {/* 精簡後的求職狀態標註 - 移除動畫與陰影 */}
+            {/* 精簡後的求職狀態標註 - 移除動畫與大區塊佔用 */}
             <div className="inline-flex items-center gap-1.5 border-l-2 border-accent pl-2 mt-1">
               <Sparkles className="w-3 h-3 text-accent fill-accent" />
               <span className="text-[10px] font-black text-accent uppercase tracking-wider">
@@ -42,11 +42,11 @@ export function ResumeHeader() {
             </div>
             hi@winnie-lin.space
           </a>
-          <a href="https://linkedin.com/in/winnielin2949" target="_blank" className="hover:text-accent flex items-center gap-2 group">
+          <a href="https://www.linkedin.com/in/winnie-lin-space" target="_blank" className="hover:text-accent flex items-center gap-2 group">
             <div className="w-4 h-4 bg-black flex items-center justify-center shrink-0 p-0.5 group-hover:bg-accent transition-colors">
               <Linkedin className="w-2.5 h-2.5 text-white" />
             </div>
-            linkedin.com/in/winnielin2949
+            linkedin.com/in/winnie-lin-space
           </a>
           <a href="https://winnie-lin.space" target="_blank" className="hover:text-accent flex items-center gap-2 group">
             <div className="w-4 h-4 bg-black flex items-center justify-center shrink-0 p-0.5 group-hover:bg-accent transition-colors">
