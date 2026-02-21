@@ -11,11 +11,11 @@ export function ResumeHeader() {
             <h1 className="text-4xl md:text-5xl font-black tracking-tighter leading-none">
               SHI TING (WINNIE) <span className="text-accent">LIN</span>
             </h1>
-            {/* Prominent Seeking Opportunities Banner */}
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 px-3 py-1 rounded-sm mt-1 animate-pulse shadow-[0_0_15px_rgba(59,130,246,0.1)]">
-              <Sparkles className="w-3.5 h-3.5 text-accent fill-accent" />
-              <span className="text-[11px] md:text-[12px] font-black text-accent uppercase tracking-widest">
-                Actively seeking opportunities in Singapore (Relocating June 2026)
+            {/* 精簡後的求職狀態標註 - 移除動畫與陰影 */}
+            <div className="inline-flex items-center gap-1.5 border-l-2 border-accent pl-2 mt-1">
+              <Sparkles className="w-3 h-3 text-accent fill-accent" />
+              <span className="text-[10px] font-black text-accent uppercase tracking-wider">
+                Seeking Singapore Opportunities (Relocating June 2026)
               </span>
             </div>
           </div>
