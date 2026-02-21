@@ -12,11 +12,11 @@ export function TechStack() {
       <h2 className="text-xs font-black uppercase tracking-[0.4em] text-muted-foreground border-b border-black pb-2">Technical Core</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-black">
         {skills.map((skill, idx) => (
-          <div key={idx} className="border-r border-b border-black p-4 space-y-3 hover:bg-black hover:text-white transition-all duration-300">
-            <h3 className="text-[10px] font-black uppercase text-accent tracking-widest">{skill.category}</h3>
-            <div className="flex flex-wrap gap-2">
+          <div key={idx} className="border-r border-b border-black p-4 space-y-3 hover:bg-black hover:text-white transition-all duration-300 group">
+            <h3 className="text-[10px] font-black uppercase text-accent tracking-widest group-hover:text-white">{skill.category}</h3>
+            <div className="flex flex-wrap gap-x-4 gap-y-1">
               {skill.items.map((item, i) => (
-                <span key={i} className="text-sm font-bold">{item}</span>
+                <span key={i} className="text-sm font-bold tracking-tight">{item}</span>
               ))}
             </div>
           </div>

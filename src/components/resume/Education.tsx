@@ -10,7 +10,7 @@ export function Education() {
         </div>
         <div className="space-y-1">
           <h3 className="text-xl font-black uppercase tracking-tight">National Central University</h3>
-          <p className="text-sm font-bold text-accent uppercase tracking-widest">BBA, Information Management</p>
+          <p className="text-[14px] font-bold text-accent uppercase tracking-widest">BBA, Information Management</p>
         </div>
       </div>
     </section>

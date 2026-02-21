@@ -1,9 +1,12 @@
 "use client"
 
+import { ExternalLink } from "lucide-react"
+
 const experiences = [
   {
     role: "Senior Software Engineer",
     company: "BTSE",
+    url: "https://www.btse.com",
     period: "2025 – Present",
     location: "Taipei",
     achievements: [
@@ -15,6 +18,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "LINE Bank",
+    url: "https://www.linebank.com.tw",
     period: "2022 – 2025",
     location: "Taipei",
     achievements: [
@@ -25,6 +29,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "E.SUN Financial",
+    url: "https://www.esunbank.com.tw",
     period: "2020 – 2021",
     location: "Taipei",
     achievements: [
@@ -46,11 +51,20 @@ export function Experience() {
             </div>
             <div className="space-y-3">
               <div className="flex flex-col md:flex-row justify-between items-start gap-1">
-                <h3 className="text-2xl font-black tracking-tight leading-none group-hover:text-accent transition-colors uppercase">
-                  {exp.role} <span className="text-muted-foreground font-medium text-lg ml-2">/ {exp.company}</span>
+                <h3 className="text-2xl font-black tracking-tight leading-none uppercase">
+                  {exp.role} 
+                  <a 
+                    href={exp.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground font-medium text-lg ml-2 hover:text-accent transition-colors inline-flex items-center group/link"
+                  >
+                    / {exp.company}
+                    <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover/link:opacity-100 transition-opacity" />
+                  </a>
                 </h3>
               </div>
-              <ul className="space-y-2 text-sm font-medium text-foreground/80 border-l-[3px] border-black pl-6">
+              <ul className="space-y-2 text-[14px] leading-relaxed font-medium text-foreground/80 border-l-[3px] border-black pl-6">
                 {exp.achievements.map((item, i) => (
                   <li key={i} className="relative before:content-[''] before:absolute before:-left-[27px] before:top-2 before:w-1.5 before:h-1.5 before:bg-black">
                     {item}

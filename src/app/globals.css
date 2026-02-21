@@ -14,16 +14,16 @@
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 96%;
     --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 96%;
+    --muted: 0 0% 40%;
     --muted-foreground: 0 0% 40%;
-    --accent: 221.2 83.2% 53.3%;
+    --accent: 221 83% 53%; /* Electric Blue */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 90%;
+    --border: 0 0% 0%;
     --input: 0 0% 90%;
     --ring: 0 0% 0%;
-    --radius: 0rem; /* 2026 趨勢：直角或極小圓角 */
+    --radius: 0rem;
   }
 }
 
@@ -32,7 +32,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#f2f2f2] text-foreground font-body antialiased;
+    @apply bg-[#f8f8f8] text-foreground font-body antialiased;
   }
 }
 
@@ -41,10 +41,14 @@
   .a4-container {
     width: 210mm;
     min-height: 297mm;
-    margin: 2rem auto;
+    margin: 3rem auto;
     background: white;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-    padding: 20mm;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+    padding: 25mm 20mm;
+    transition: transform 0.3s ease;
+  }
+  .a4-container:hover {
+    transform: translateY(-5px);
   }
 }
 
@@ -58,10 +62,11 @@
   }
   .a4-container {
     width: 210mm;
-    height: 297mm;
-    padding: 15mm;
+    min-height: 297mm;
+    padding: 20mm;
     margin: 0;
     box-shadow: none;
+    background: white !important;
   }
   .no-print {
     display: none !important;
@@ -71,12 +76,17 @@
   }
 }
 
+/* Typography Enhancements */
+h1, h2, h3 {
+  @apply tracking-tighter;
+}
+
 /* Animations */
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-slide-up {
-  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

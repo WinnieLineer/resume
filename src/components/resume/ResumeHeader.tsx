@@ -34,17 +34,17 @@ export function ResumeHeader() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[12px] font-bold border-l border-black pl-8">
-          <a href="mailto:linw2949@gmail.com" className="hover:text-accent transition-colors flex items-center gap-2">
-            <Mail className="w-3 h-3" /> linw2949@gmail.com
+          <a href="mailto:linw2949@gmail.com" className="hover:text-accent transition-colors flex items-center gap-2 group">
+            <Mail className="w-3 h-3 group-hover:scale-110 transition-transform" /> linw2949@gmail.com
           </a>
-          <a href="tel:+886906182355" className="hover:text-accent transition-colors flex items-center gap-2">
-            <Phone className="w-3 h-3" /> +886 906-182-355
+          <a href="tel:+886906182355" className="hover:text-accent transition-colors flex items-center gap-2 group">
+            <Phone className="w-3 h-3 group-hover:scale-110 transition-transform" /> +886 906-182-355
           </a>
-          <a href="https://linkedin.com/in/winnielin2949" target="_blank" className="hover:text-accent transition-colors flex items-center gap-2">
-            <Linkedin className="w-3 h-3" /> winnielin2949
+          <a href="https://linkedin.com/in/winnielin2949" target="_blank" className="hover:text-accent transition-colors flex items-center gap-2 group">
+            <Linkedin className="w-3 h-3 group-hover:scale-110 transition-transform" /> winnielin2949
           </a>
-          <a href="https://winnie-lin.space" target="_blank" className="hover:text-accent transition-colors flex items-center gap-2">
-            <Globe className="w-3 h-3" /> winnie-lin.space
+          <a href="https://winnie-lin.space" target="_blank" className="hover:text-accent transition-colors flex items-center gap-2 group">
+            <Globe className="w-3 h-3 group-hover:scale-110 transition-transform" /> winnie-lin.space
           </a>
         </div>
       </div>
