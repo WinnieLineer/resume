@@ -23,10 +23,13 @@ export default function Home() {
           <Education />
         </div>
 
-        <footer className="mt-8 pt-2 border-t border-black hidden print:block">
-          <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-muted-foreground">
-            <span>Shi Ting (Winnie) Lin • Senior Backend Engineer</span>
-            <span>Page 1 of 2</span>
+        <footer className="mt-12 pt-2 border-t border-black">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-[8px] font-black uppercase tracking-[0.2em] text-muted-foreground">
+            <div className="flex items-center gap-4">
+              <span>Shi Ting (Winnie) Lin • Senior Backend Engineer</span>
+              <span className="text-accent/60">UNAUTHORIZED DATA SCRAPING OR TRANSCRIPTION IS STRICTLY PROHIBITED</span>
+            </div>
+            <span className="hidden print:block">Page 1 of 2</span>
           </div>
         </footer>
       </div>
