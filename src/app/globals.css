@@ -36,22 +36,25 @@
   }
 }
 
-/* 浮水印核心樣式 - 確保在最頂層且不干擾操作 */
+/* 浮水印核心樣式 - 強制置頂且不干擾操作 */
 .watermark {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
   font-size: 60pt;
   font-weight: 900;
-  color: rgba(0, 0, 0, 0.04); /* 極低透明度 */
+  color: rgba(0, 0, 0, 0.08); /* 稍微增加透明度以確保 PDF 可見 */
   white-space: nowrap;
-  pointer-events: none; /* 穿透點擊 */
-  z-index: 9999; /* 強制置頂，確保不被背景遮擋 */
+  pointer-events: none;
+  z-index: 999999; /* 極高層級，確保在所有內容之上 */
   user-select: none;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  display: block;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 @media screen {
@@ -85,16 +88,19 @@
     background: white !important;
     overflow: visible !important;
     position: relative;
+    z-index: 10;
   }
   .no-print {
     display: none !important;
   }
   
   .watermark {
-    display: block !important;
+    display: flex !important;
     position: fixed !important;
-    color: rgba(0, 0, 0, 0.04) !important;
-    z-index: 9999 !important;
+    color: rgba(0, 0, 0, 0.08) !important;
+    z-index: 999999 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   * {

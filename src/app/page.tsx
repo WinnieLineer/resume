@@ -9,11 +9,6 @@ import { DownloadButton } from "@/components/resume/DownloadButton"
 export default function Home() {
   return (
     <main className="min-h-screen pb-12 bg-[#f4f4f4] relative">
-      {/* 浮水印移至頂層以確保跨頁顯示 */}
-      <div className="watermark" aria-hidden="true">
-        For Recruitment Purpose Only
-      </div>
-
       {/* Responsive Fixed Container for Download Button */}
       <div className="fixed bottom-6 right-6 md:top-8 md:right-8 md:bottom-auto z-50 no-print">
         <DownloadButton />
@@ -36,6 +31,11 @@ export default function Home() {
             <span className="hidden print:block">Page 1 of 2</span>
           </div>
         </footer>
+      </div>
+
+      {/* 浮水印放置於 DOM 最後且 z-index 最高，確保不被 A4 背景遮擋 */}
+      <div className="watermark" aria-hidden="true">
+        For Recruitment Purpose Only
       </div>
     </main>
   )
