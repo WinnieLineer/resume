@@ -32,7 +32,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#f8f8f8] text-foreground font-body antialiased;
+    @apply bg-[#e5e5e5] text-foreground font-body antialiased;
   }
 }
 
@@ -43,12 +43,10 @@
     min-height: 297mm;
     margin: 3rem auto;
     background: white;
-    box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+    box-shadow: 0 60px 150px rgba(0,0,0,0.2);
     padding: 25mm 20mm;
-    transition: transform 0.3s ease;
-  }
-  .a4-container:hover {
-    transform: translateY(-5px);
+    position: relative;
+    overflow: hidden;
   }
 }
 
@@ -59,13 +57,16 @@
   }
   body {
     background: white !important;
+    padding: 0;
+    margin: 0;
   }
   .a4-container {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 20mm;
-    margin: 0;
-    box-shadow: none;
+    width: 210mm !important;
+    height: 100% !important;
+    min-height: 297mm !important;
+    padding: 20mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
     background: white !important;
   }
   .no-print {
