@@ -36,17 +36,14 @@
   }
 }
 
-/* 物理級 A4 鎖定 */
 @media screen {
   .a4-container {
     width: 210mm;
-    min-height: 297mm;
     margin: 2rem auto;
     background: white;
     box-shadow: 0 40px 100px rgba(0,0,0,0.1);
     padding: 15mm 15mm;
     position: relative;
-    overflow: hidden;
   }
 }
 
@@ -62,7 +59,6 @@
   }
   .a4-container {
     width: 210mm !important;
-    height: auto !important;
     padding: 15mm !important;
     margin: 0 !important;
     box-shadow: none !important;
@@ -72,8 +68,20 @@
     display: none !important;
   }
   
+  /* 關鍵修復：防止動畫導致渲染位移 */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* 關鍵修復：確保區塊能正常跨頁，但單個項目不被截斷 */
   section {
-    page-break-inside: avoid;
+    page-break-inside: auto !important;
+    margin-bottom: 5mm !important;
+  }
+  
+  .experience-item {
+    page-break-inside: avoid !important;
   }
 }
 
@@ -83,7 +91,6 @@
     width: 100%;
     margin: 0;
     padding: 1.5rem;
-    min-height: auto;
   }
 }
 

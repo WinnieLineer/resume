@@ -13,18 +13,18 @@ export default function Home() {
         <DownloadButton />
       </div>
 
-      <div className="a4-container relative">
-        <div className="space-y-5">
+      <div className="a4-container">
+        <div className="space-y-6">
           <ResumeHeader />
           <TechStack />
           <Experience />
           <Education />
         </div>
 
-        <footer className="mt-6 pt-2 border-t border-black hidden print:block">
+        <footer className="mt-8 pt-2 border-t border-black hidden print:block">
           <div className="flex justify-between text-[8px] font-black uppercase tracking-widest text-muted-foreground">
             <span>Shi Ting (Winnie) Lin • Senior Backend Engineer</span>
-            <span>2026 EDITION</span>
+            <span>Page 1 of 2</span>
           </div>
         </footer>
       </div>
